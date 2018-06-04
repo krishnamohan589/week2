@@ -1,0 +1,78 @@
+h1{
+    text-align: center;
+    animation-name : move-left;
+    animation-duration : 2s;
+}
+@keyframes move-left
+{
+from
+{
+    left:100px;
+}
+to
+{
+    left: 200px;
+}
+}
+body{
+    background-color: cadetblue;
+}
+
+.container{
+
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 3vw;
+    height: 30vh;
+       margin: 8vh;
+
+}
+.item{
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    height: 35vh;
+    width: 20vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+img{
+    height: 12vh;
+}
+@media only screen and (max-width: 1200px) {
+    .container {
+        grid-template-columns: auto auto auto ;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: auto auto auto;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .grid-container {
+        grid-template-columns: auto auto;
+
+    }
+    .skill-writeup{
+        display: none;
+    
+    }
+}
+    
+
+/*@media only screen and (max-width: 760px) {
+    .container {
+        grid-template-columns: auto auto auto;
+    }
+}*/
+ .item:hover
+        
+ {
+     box-shadow: 3px 3px rgb(131, 120, 120);
+        }
+
+
+       
