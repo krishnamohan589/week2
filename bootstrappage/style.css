@@ -1,0 +1,23 @@
+body{
+    background-color: #6AC5AC;
+}
+
+.container-fluid {
+    padding: 70px;
+}
+.box{
+    
+    background-color:white;
+
+    padding-left:  5px;
+    margin: 15px;
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    
+}
+
+img {
+    height: 55px;
+    width: 40px;
+}
