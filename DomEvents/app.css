@@ -32,14 +32,3 @@
     border-color: black;
     background-color: yellow;
   }
-  @keyframes myanimation
-  {
-      from
-      {
-          left:100px;
-      }
-      to
-      {
-          right:200px;
-      }
-  }

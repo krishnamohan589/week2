@@ -10,42 +10,41 @@ function identifyByTag() {
     console.log(document.getElementsByTagName('p'));
 }
 
-function changeBackColorForAllBox(){
-    console.log(document.getElementsByClassName("box1")[0].style.backgroundColor = "blue");
-    console.log(document.getElementsByClassName("box1")[1].style.backgroundColor = "blue");
-    console.log(document.getElementsByClassName("box1")[2].style.backgroundColor = "blue");
-    
+function changeBackground() {
+    document.getElementById('block1').style.backgroundColor = "blue";
 }
 
 function increaseFont() {
-    console.log(document.getElementById('block2').style.fontSize = "200%");
+    document.getElementById('block2').style.fontSize = "xx-large";
 }
 
 function changeFontColor() {
-    console.log(document.getElementById('block3').style.color = "green");
+
+    document.getElementById('block3').style.color = "green";
 }
 
 function revertColor() {
-    console.log(document.getElementById('block3').style.color = "black");
+    document.getElementById('block3').style.color = "black";
 }
 
 function hide() {
-    console.log(document.getElementById('block4').style.visibility = "hidden");
+    document.getElementById('block4').style.visibility = "hidden";
 }
 
-function changeBackColor() {
-    console.log(document.getElementsByClassName("box2")[0].style.backgroundColor = "blue");
-    console.log(document.getElementsByClassName("box2")[1].style.backgroundColor = "blue");
-    console.log(document.getElementsByClassName("box2")[2].style.backgroundColor = "blue");
+function changeBackColorForAllBox() {
+    document.getElementsByClassName('box1')[0].style.backgroundColor = "green";
+    document.getElementsByClassName('box1')[1].style.backgroundColor = "green";
+    document.getElementsByClassName('box1')[2].style.backgroundColor = "green";
+
 }
 
-function option()
-{
-    console.log(document.getElementById('browsers').value);
+function changetoblue() {
+    document.getElementsByClassName('box2')[0].style.backgroundColor = "blue";
+    document.getElementsByClassName('box2')[1].style.backgroundColor = "blue";
+    document.getElementsByClassName('box2')[2].style.backgroundColor = "blue";
 }
-function returnnumbersOnly(evt)
-{
-   
+function numbersOnly(evt) {
+
     evt = (evt) ? evt : window.event;
     var charCode = (evt.which) ? evt.which : evt.keyCode;
     if (charCode > 31 && (charCode < 48 || charCode > 57)) {
@@ -56,40 +55,46 @@ function returnnumbersOnly(evt)
 }
 
 function addAdjacent() {
-    var d1 = document.getElementById('para2');
-    d1.insertAdjacentHTML('afterend', '<div id="p2">I got generated on the fly...</div>');
+    var textnode = document.createTextNode("I got generated on the fly...");
+    document.getElementById('para2').appendChild(textnode);
 }
 
 function removePara() {
-    
-    console.log(document.getElementById('para4').innerHTML=" ");
+    document.getElementById("para4").remove();
 }
- function animatePara()
- {
-     myMove();
- }
 
+function animatePara() {
+    myMove();
+}
 function myMove() {
     document.getElementById('box5').style.position = "relative";
     document.getElementById('box5').style.animationName = "myanimation";
     document.getElementById('box5').style.animationDuration = "2s";
-
+}
+function upperCase() {
+    var x = document.getElementById('inputBox1');
+    var y = document.getElementById('inputBox2');
+    y.value = x.value.toUpperCase();
 }
 
-    
-function uppercase() {
-    var x = document.getElementById("inputBox1");
-    var y=  document.getElementById("inputBox2");
-    y.value=x.value.toUpperCase();
-}
 function CamelCase() {
     var str = document.getElementById("inputBox3");
-    str.value= str.value.toLowerCase().replace(/(?:(^.)|(\s+.))/g, function(match) {
-        return match.charAt(match.length-1).toUpperCase();
-    });
+    // str.value=str.value.toLowerCase().replace("/(?:(^.)|(\s+.))/g",function(match){
+    //  return match.charAt(match.length-1).toUpperCase();
+    // });
+    //camelize = function camelize(str) {
+    //return str.replace(/\b\w/g, chr => chr.toUpperCase()).replace(" ", "");
+    //}
+    camelize = function camelize(str) {
+        return str.replace(/\W+(.)/g, function (match, chr) {
+            return chr.toUpperCase();
+        });
+    }
 }
 
-
 function myFocusFunction() {
-    console.log(document.getElementById("myInput").style.backgroundColor = "yellow"); 
+    console.log(document.getElementById("myinput").style.backgroundColor = "yellow");
+}
+function option() {
+    console.log(document.getElementById('browsers').value);
 }
